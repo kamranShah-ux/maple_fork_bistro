@@ -1,0 +1,255 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Warm Inviting Comfort Design - Color Palette */
+  --primary: #6B4423; /* Warm brown for headings and primary text */
+  --primary-foreground: #FBF8F3; /* Soft cream for text on primary */
+  --sidebar-primary: #7BA88F; /* Fresh sage green */
+  --sidebar-primary-foreground: #FBF8F3; /* Soft cream */
+  
+  /* Accent colors */
+  --accent: #D4A574; /* Warm gold for highlights */
+  --accent-foreground: #6B4423; /* Warm brown text on gold */
+  
+  /* Secondary colors */
+  --secondary: #E8A89B; /* Soft coral for special items */
+  --secondary-foreground: #6B4423; /* Warm brown text */
+  
+  /* Chart colors (warm palette) */
+  --chart-1: #D4A574; /* Warm gold */
+  --chart-2: #7BA88F; /* Sage green */
+  --chart-3: #E8A89B; /* Soft coral */
+  --chart-4: #6B4423; /* Warm brown */
+  --chart-5: #C85A3A; /* Terracotta */
+  
+  /* Radius - generous for warm feel */
+  --radius: 1rem;
+  
+  /* Background and text colors */
+  --background: #FBF8F3; /* Soft cream background */
+  --foreground: #2C2C2C; /* Dark charcoal for text */
+  --card: #FFFFFF; /* White cards */
+  --card-foreground: #2C2C2C; /* Dark text on cards */
+  --popover: #FFFFFF; /* White popover */
+  --popover-foreground: #2C2C2C; /* Dark text */
+  
+  /* Muted colors */
+  --muted: #E8E3DB; /* Light taupe */
+  --muted-foreground: #6B4423; /* Warm brown */
+  
+  /* Border and input */
+  --border: #E8E3DB; /* Light taupe border */
+  --input: #FFFFFF; /* White input */
+  --ring: #D4A574; /* Gold focus ring */
+  
+  /* Destructive colors */
+  --destructive: #C85A3A; /* Terracotta for destructive actions */
+  --destructive-foreground: #FFFFFF; /* White text */
+  
+  /* Sidebar colors */
+  --sidebar: #FBF8F3; /* Soft cream sidebar */
+  --sidebar-foreground: #2C2C2C; /* Dark text */
+  --sidebar-accent: #D4A574; /* Gold accent */
+  --sidebar-accent-foreground: #6B4423; /* Warm brown */
+  --sidebar-border: #E8E3DB; /* Light taupe border */
+  --sidebar-ring: #D4A574; /* Gold ring */
+}
+
+.dark {
+  --primary: #D4A574; /* Gold in dark mode */
+  --primary-foreground: #1A1410; /* Very dark background */
+  --sidebar-primary: #7BA88F; /* Sage green */
+  --sidebar-primary-foreground: #FBF8F3; /* Soft cream */
+  --background: #1A1410; /* Very dark background */
+  --foreground: #F5F1E8; /* Warm cream text */
+  --card: #2C2418; /* Dark card background */
+  --card-foreground: #F5F1E8; /* Warm cream text */
+  --popover: #2C2418; /* Dark popover */
+  --popover-foreground: #F5F1E8; /* Warm cream text */
+  --secondary: #E8A89B; /* Soft coral */
+  --secondary-foreground: #F5F1E8; /* Warm cream */
+  --muted: #3D3530; /* Dark muted */
+  --muted-foreground: #A89080; /* Taupe text */
+  --accent: #D4A574; /* Gold accent */
+  --accent-foreground: #1A1410; /* Very dark text */
+  --destructive: #C85A3A; /* Terracotta */
+  --destructive-foreground: #F5F1E8; /* Warm cream */
+  --border: #3D3530; /* Dark border */
+  --input: #2C2418; /* Dark input */
+  --ring: #D4A574; /* Gold ring */
+  --chart-1: #D4A574; /* Gold */
+  --chart-2: #7BA88F; /* Sage green */
+  --chart-3: #E8A89B; /* Soft coral */
+  --chart-4: #F5B89B; /* Light coral */
+  --chart-5: #C85A3A; /* Terracotta */
+  --sidebar: #2C2418; /* Dark sidebar */
+  --sidebar-foreground: #F5F1E8; /* Warm cream */
+  --sidebar-accent: #D4A574; /* Gold */
+  --sidebar-accent-foreground: #1A1410; /* Very dark */
+  --sidebar-border: #3D3530; /* Dark border */
+  --sidebar-ring: #D4A574; /* Gold ring */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: #6B4423;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl font-bold;
+  }
+  
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  /* Warm Inviting Comfort Design - Custom Components */
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-[#D4A574] text-[#6B4423] rounded-lg font-semibold transition-all duration-300 hover:bg-[#C49564] hover:shadow-lg hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-[#7BA88F] text-white rounded-lg font-semibold transition-all duration-300 hover:bg-[#6B9880] hover:shadow-lg hover:scale-105;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-[#6B4423] text-[#6B4423] rounded-lg font-semibold transition-all duration-300 hover:bg-[#6B4423] hover:text-white;
+  }
+  
+  .card-warm {
+    @apply bg-white rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105;
+  }
+  
+  .section-divider {
+    @apply my-16 md:my-24;
+  }
+  
+  .text-accent {
+    @apply text-[#D4A574];
+  }
+  
+  .text-primary {
+    @apply text-[#6B4423];
+  }
+  
+  .text-sage {
+    @apply text-[#7BA88F];
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}

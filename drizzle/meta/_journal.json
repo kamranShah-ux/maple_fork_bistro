@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1766582209143,
+      "tag": "0000_cute_steel_serpent",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1766582259352,
+      "tag": "0001_chubby_microbe",
+      "breakpoints": true
+    }
+  ]
+}
